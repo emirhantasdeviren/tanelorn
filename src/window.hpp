@@ -6,14 +6,13 @@
 #include "defines.hpp"
 
 class Window {
-    private:
-        HWND handle;
+  private:
+    HWND handle;
 
-    public:
-        explicit Window(HINSTANCE instance, u32 width, u32 height, const std::string& title);
-        ~Window();
-        Window(const Window& w) = delete;
+  public:
+    explicit Window(HINSTANCE instance, u32 width, u32 height, const std::string &title);
+    ~Window();
+    Window(const Window &w) = delete;
 
-        void run();
-
+    void run();
 };
