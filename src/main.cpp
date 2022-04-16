@@ -5,16 +5,10 @@
 #include "./window.hpp"
 #include "./string.hpp"
 
-// int WINAPI WinMain(HINSTANCE instance, HINSTANCE prev_instance, PSTR cmd_line, int cmd_show) {
-int main() {
-    tanelorn::String s = "Emirhan";
+int WINAPI WinMain(HINSTANCE instance, HINSTANCE prev_instance, PSTR cmd_line, int cmd_show) {
+    Window w(instance, 1280, 720, "Tanelorn Engine");
 
-    char *p = s.as_c_str();
-    for (i32 i = 0; i < 7; i++) {
-        std::cout << *(p + i);
-    }
-
-    std::cout << std::endl;
+    w.run();
 
     return 0;
 }
