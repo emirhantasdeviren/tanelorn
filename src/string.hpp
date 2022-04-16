@@ -13,7 +13,8 @@ namespace tanelorn {
         ~String();
         String(const String &) = delete;
 
-        u8 *as_ptr();
+        u8 *as_ptr() const noexcept;
         char *as_c_str();
+        void push(u8 ch);
     };
 }; // namespace tanelorn
